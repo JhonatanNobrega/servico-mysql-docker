@@ -8,9 +8,8 @@
 ### Passo a passo
 <ul>
   <li>Criar as pastas do banco, no caso seria no mesmo caminho do arquivo docker-compose.yml --  data/mysql</li>
+  <li>Rodar o comando apenas a primeira vez docker-compose build</li>
 </ul>
-
-. Rodar o comando apenas a primeira vez docker-compose build
 
 ### Após isso o serviços pode ser iniciado a qualquer momento com os comandos abaixo.
 <ul>
