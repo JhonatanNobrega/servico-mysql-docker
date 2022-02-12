@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  db:
+    container_name: db_servico
+    image: mysql:5.7
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: db_servico
+      MYSQL_USER: docker
+      MYSQL_PASS: cwP~vmn*Cgzs
+      MYSQL_ROOT_PASSWORD: docker
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    networks:
+      - default
+  phpmyadmin:
+    container_name: phpmyadmin_servico
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: cwP~vmn*Cgzs
+      MYSQL_ROOT_PASSWORD: docker
